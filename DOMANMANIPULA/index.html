@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-MANIPULATION</title>
+</head>
+<body>
+
+    <style>
+        textWhite{
+            color:aliceblue;
+
+        }
+
+        textpurple{
+            color:blueviolet;
+        }
+
+    </style>
+
+    <h1 id ="h1">DOM-MANIPULATION</h1>
+
+    <button id="red">RED</button>
+    <button id="blue">BLUE</button>
+    <br>
+    <br>
+    <button id="white">WHITE</button>
+    <button id="purple">PURPLE</button>
+    <br>
+    <br>
+    <button id='SM'>SUPRISE-ME</button>
+    <button id='DSM'>DON'T SURPRISE ME</button>
+   
+
+
+   <script>
+        console.log("Hello")
+
+        function consoleRed(){
+            console.log("RED_CLICKED")
+
+        document.body.style.backgroundColor = 'red'
+        }
+
+
+
+        function consoleWhite(){
+            document.getElementById("h1").style.color = 'White'
+            console.log("WHITE_CLICKED")
+        }
+
+
+
+        function consolePurple(){
+            document.getElementById("h1").style.color = 'Purple'
+            console.log("PURPLE_CLICKED")
+        }
+
+
+
+
+        function consoleBlue(){
+            console.log("BLUE_CLICKED")
+        
+        document.body.style.backgroundColor = 'blue'
+        }
+
+
+
+        function consolesurpriseme(){
+            console.log("SURPRISE_CLICKED")
+            const paragraph = document.createElement('p')
+            paragraph.innerText = "sssssuuuupppprrrriiisssseeee........"
+            document.body.appendChild(paragraph)
+
+            
+        }
+
+
+        function consoledontsurpriseme(){
+            console.log("NOSURPRISE_CLICKED")
+            document.querySelector('p').remove();
+        }
+
+        
+
+        
+
+        const redButton = document.getElementById("red");
+        const blueButton = document.getElementById("blue");
+        const whiteButton = document.getElementById("white");
+        const purpleButton = document.getElementById("purple");
+        const Suprisemebutton = document.getElementById("SM")
+        const DontSuprisemebutton = document.getElementById("DSM");
+
+
+
+        
+
+
+        console.log('RED')
+        console.log('BLUE')
+        console.log('WHITE')
+        console.log('PURPLE')
+
+
+        redButton.addEventListener("click", consoleRed);
+        blueButton.addEventListener("click", consoleBlue);
+        whiteButton.addEventListener("click", consoleWhite);
+        purpleButton.addEventListener("click", consolePurple);
+        Suprisemebutton.addEventListener("click", consolesurpriseme);
+        DontSuprisemebutton.addEventListener('click', consoledontsurpriseme);
+
+    </script>
+    
+</body>
+</html>
